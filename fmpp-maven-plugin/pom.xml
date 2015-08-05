@@ -8,10 +8,10 @@
 	</parent>
 
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.googlecode.fmpp-maven-plugin</groupId>
+	<groupId>com.lumesoftware.fmpp-maven-plugin</groupId>
 	<artifactId>fmpp-maven-plugin</artifactId>
 	<packaging>maven-plugin</packaging>
-	<version>1.0</version>
+	<version>1.1</version>
 	<name>FMPP Maven Mojo</name>
 	<url>http://code.google.com/p/freemarkerpp-maven-plugin/</url>
 
@@ -64,7 +64,7 @@
 		<dependency>
 			<groupId>net.sourceforge.fmpp</groupId>
 			<artifactId>fmpp</artifactId>
-			<version>0.9.14</version>
+			<version>0.9.15</version>
 		</dependency>
 	</dependencies>
 
@@ -119,21 +119,24 @@
 						</goals>
 					</execution>
 				</executions>
+				<configuration>
+					<additionalparam>-Xdoclint:none</additionalparam>
+				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-gpg-plugin</artifactId>
-				<version>1.1</version>
-				<executions>
-					<execution>
-						<id>sign-artifacts</id>
-						<phase>verify</phase>
-						<goals>
-							<goal>sign</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+			<!--<plugin>-->
+				<!--<groupId>org.apache.maven.plugins</groupId>-->
+				<!--<artifactId>maven-gpg-plugin</artifactId>-->
+				<!--<version>1.1</version>-->
+				<!--<executions>-->
+					<!--<execution>-->
+						<!--<id>sign-artifacts</id>-->
+						<!--<phase>verify</phase>-->
+						<!--<goals>-->
+							<!--<goal>sign</goal>-->
+						<!--</goals>-->
+					<!--</execution>-->
+				<!--</executions>-->
+			<!--</plugin>-->
 		</plugins>
 	</build>
 	<reporting>
